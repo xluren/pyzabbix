@@ -3,9 +3,9 @@ pyzabbix
 
 a tool based  on zabbix api  to operate zabbix more easily
 
-zabbix api some likes restful api,it post a json to  api_jsonrpc.php
+zabbix api some likes restful api,it posts a json to  api_jsonrpc.php
 and the server will return data with json formate which contains the 
-infomation you need or some error infomation;
+infomation you need or some error infomation to help you debug your code
 
 make zabbix post-data-formate  simple, it like followings:
 
@@ -23,6 +23,7 @@ make zabbix post-data-formate  simple, it like followings:
 ```
 
 so at any time, I just need two arguement 
+
 *   **method** its type is a string like "user.login","item.create",etc.
 *   **params** its type is a dict
 
@@ -30,8 +31,8 @@ afer my encapsulation,you just need to pass one arguement that is params.
 
 and the api can be used to pass the method like:
 ```
-zb.**host.get**(params_dict)
+zb.host.get(params_dict)
 ```
 Thanks to [pyzabbix](https://github.com/lukecyca/pyzabbix),
-It inspires me to use python magic method like ** __getattr__** to  make the code much cleaner
+It inspires me to use python magic method like **__getattr__** to  make the code much cleaner
 
