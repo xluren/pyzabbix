@@ -18,7 +18,6 @@ class zabbixapi(object):
         params={"user":user,"password":password}
         response=self.deal_request(method=method,params=params)
         auth=json.loads(response.text)["result"]
-        print auth
         self.request_data["auth"]=auth
 
     def deal_request(self,method,params):
